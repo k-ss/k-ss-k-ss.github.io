@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+	<!-------//收藏用logo图标--------->
+	<link rel="bookmark" href="/favicon.ico?" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ting</title>
+    <script>/* alert("我喜欢你，你能做我女朋友吗？")*/</script>
+    <script src="https://libs.baidu.com/jquery/2.1.4/jquery.js"></script>
+    <!--------返回顶部------->
+    <style>
+        /******top**css*****/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 1000px;
+            background: pink;
+        }
+        button{
+            height:30px;
+            width:80px;
+            position:fixed;
+            bottom:5px;
+            right:5px;
+        }
+        .hide{
+            display:none;
+        }  /*如果class包含hide则不显示*/
+
+        img{
+            
+            width: 500px;
+            
+            
+        }
+        #cell{
+            display:table;
+            width:300px;
+            height:300px;
+            background:#000;
+            margin:0 auto;
+            color:red;
+        }
+        p{
+            color: #000;
+            text-align: center;
+
+        }
+                /*------------页脚css---------*/
+        footer{
+            border-top:2px solid #ddd;
+            color:#444;
+            text-align: center;
+            bottom: 20px;
+            width:100%;
+           
+        }
+        p.big {
+            line-height: 12;
+        }
+        .hea{
+            background-color: rgb(243, 200, 245);
+            text-align: center;
+            height:50px;
+            line-height: 2;
+
+        }
+        </style>
+</head>
+<body>
+
+    <header class="hea"><h2>Ting</h2></header>
+    <p class="big"> &#32;最美阿婷 </p>
+
+<div id="cell">
+
+    <img src="/t1.jpg">
+</div>
+<div id="cell">
+    <img src="/t2.jpg">
+</div>
+<div id="cell">
+    <img src="/t3.jpg">
+</div>
+<button class="returnTop hide" onclick="returnTop()">top</button>
+
+<script>
+    window.onscroll=function () {  //滚动条事件，只要滚动条滚动就触发该事件
+        if ($(window).scrollTop()>250){
+           $('.returnTop').removeClass('hide')  //如果滚动条距离上方超过250px，则删除按钮的hide，即显示“返回顶部”按钮
+       } else{
+           $('.returnTop').addClass('hide')}   //如果滚动条距离上方不超过250px，则增加按钮的hide，即不显示“返回顶部”按钮
+    }
+
+    function returnTop() {
+        $(window).scrollTop(0)  //如果点击“返回顶部”按钮，设置滚动条距离上方距离为0，即返回顶部
+    }
+</script>
+
+    <p class="big"> &#32;</p>
+
+    <p class="big">小婷婷吖，你愿意做我的女朋友吗？</p>
+    <p class="big">我是真的很喜欢你！</p>
+    <p class="big"> &#32; </p>
+    <p class="big"> &#32; </p>
+
+
+<footer>Fish<br/>Copyright © 陌苏网络 www.mosu.cn</footer>
+
+
+</body>
+</html>
+
+
